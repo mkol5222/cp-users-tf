@@ -16,4 +16,13 @@ terraform init
 terraform apply -var publish=false
 # publish
 terraform apply -var publish=true
+
+# other way to publish
+curl -OL https://github.com/mkol5222/cp-mgmt-commands/raw/master/releases/x86_64/publish
+chmod +x ./publish
+
+export CHECKPOINT_SERVER=$TF_VAR_CPSERVER
+export CHECKPOINT_CLOUD_MGMT_ID=$TF_VAR_CPID
+export CHECKPOINT_API_KEY=$TF_VAR_CPKEY
+./publish
 ```
