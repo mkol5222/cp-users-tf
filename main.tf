@@ -12,7 +12,8 @@ provider "checkpoint" {
   context       = "web_api"
   cloud_mgmt_id = var.CPID
   timeout = 30
-  session_description = "Terraform session"
+  session_description = "Terraform session descr."
+  session_name = "Terraform session"
 }
 
 variable "CPSERVER" {
