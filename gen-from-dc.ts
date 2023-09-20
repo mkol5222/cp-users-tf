@@ -28,7 +28,7 @@ for (const obj of data.objects) {
     const groupResource = `
     resource "checkpoint_management_group" "${obj.name}" {
         name = "${obj.name}"
-        members = [ ${groupMemmbers.map((x) => `checkpoint_management_host.${x}`).join(", ")} ]
+        members = [ ${groupMemmbers.map((x) => `checkpoint_management_host.${x}.name`).join(", ")} ]
     }
     `
     console.log(groupResource);

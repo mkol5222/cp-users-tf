@@ -30,3 +30,22 @@ export CHECKPOINT_API_KEY=$TF_VAR_CPKEY
 terraform destroy
 ./publish
 ```
+
+### Parse Generic DC to Terraform
+
+```bash
+
+# remove other TF resources first, if exist
+terraform destroy
+./publish
+# remove also definitions
+rm ./users.tf ./groups.tf
+
+
+# generate new TF from Generic DC feed at ./data/dcobj.json
+deno run --allow-read ./gen-from-dc.ts | tee dcresources.tf
+# TF apply
+terraform plan
+terraform apply
+./publish
+```

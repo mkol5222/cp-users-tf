@@ -35,3 +35,7 @@ terraform.rc
 sid.json
 sid.json
 publish
+dcresources.tf
+groups.tf
+users.tf
+example.csv

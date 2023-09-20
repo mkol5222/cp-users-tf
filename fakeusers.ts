@@ -2,7 +2,7 @@ import { faker } from 'https://cdn.skypack.dev/@faker-js/faker';
 import * as csv from "https://deno.land/std@0.201.0/csv/mod.ts"
 import { writeCSV } from "https://deno.land/x/csv/mod.ts";
 
-const COUNT = 100;
+const COUNT = 2500;
 
 function generateLoginName(fullName: string): string {
     // Remove spaces and convert to lowercase
