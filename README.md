@@ -48,4 +48,8 @@ deno run --allow-read ./gen-from-dc.ts | tee dcresources.tf
 terraform plan
 terraform apply
 ./publish
+
+# remove from CP and TF state
+terraform destroy
+./publish
 ```
