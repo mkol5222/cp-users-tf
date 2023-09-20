@@ -46,3 +46,9 @@ sudo apt-get update
 sudo apt-get install -y powershell
 
 curl -fsSL https://deno.land/x/install/install.sh | sh
+cat <<'EOF' >> $HOME/.bashrc
+
+  export DENO_INSTALL="/home/vscode/.deno"
+  export PATH="$DENO_INSTALL/bin:$PATH"
+EOF
+
