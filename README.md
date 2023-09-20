@@ -25,4 +25,8 @@ export CHECKPOINT_SERVER=$TF_VAR_CPSERVER
 export CHECKPOINT_CLOUD_MGMT_ID=$TF_VAR_CPID
 export CHECKPOINT_API_KEY=$TF_VAR_CPKEY
 ./publish
+
+# destroy
+terraform destroy
+./publish
 ```
