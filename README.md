@@ -4,6 +4,7 @@
 deno run --allow-write fakeusers.ts
 
 # update TF file
+rm dcresources.tf
 deno run --allow-read gentf.ts | tee users.tf
 deno run --allow-read gengr.ts | tee groups.tf
 
@@ -13,6 +14,7 @@ env | grep TF_VAR_CP
 
 # apply
 terraform init
+terraform plan
 terraform apply -var publish=false
 # publish
 terraform apply -var publish=true
